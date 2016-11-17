@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   >
+    <LinearLayout
+          android:background="@color/gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/catalog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+            android:textSize="15dp"
+        android:clickable="false"
+        android:enabled="false"
+
+       />
+    </LinearLayout>
+    <LinearLayout
+         android:gravity="center"
+         android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:scaleType="fitXY"
+            android:layout_margin="@dimen/mh5.0dimens5.0dp"
+        android:id="@+id/icon"
+        android:layout_width="@dimen/mh60.0dimens60.0dp"
+        android:layout_height="@dimen/mh60.0dimens60.0dp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/name"
+            android:textColor="@color/black_light"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/mh18.0dimens18.0dp"/>
+
+
+    </LinearLayout>
+    <Button
+        android:layout_marginRight="@dimen/mh15.0dimens15.0dp"
+         android:background="@drawable/bt__selsect"
+        android:id="@+id/button"
+        android:layout_width="@dimen/mh65.0dimens65.0dp"
+        android:layout_height="wrap_content"
+        android:text="锁定"
+        android:textColor="#000000"
+
+        android:textSize="16dp"/>
+</LinearLayout>
+</LinearLayout>

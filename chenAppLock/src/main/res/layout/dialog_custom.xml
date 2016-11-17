@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_dialog_custom"
+    android:orientation="vertical" >
+
+    <LinearLayout
+
+         android:weightSum="3"
+         android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+         android:padding="@dimen/mh10.0dimens10.0dp"
+         android:background="@drawable/bt_userloginshape"
+        android:layout_weight="1"
+        android:id="@+id/Reset_protection"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:text="重设密保"
+        android:textColor="@color/whites" />
+
+        1<TextView
+        android:background="@drawable/bt_userloginshape"
+             android:padding="@dimen/mh10.0dimens10.0dp"
+            android:layout_weight="1"
+            android:id="@+id/resetPas"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="重设密码"
+            android:textColor="@color/whites" />
+        <TextView
+            android:background="@drawable/bt_userloginshape"
+            android:padding="@dimen/mh10.0dimens10.0dp"
+            android:layout_weight="1"
+            android:id="@+id/cen"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/whites" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/mh20.0dimens20.0dp"
+        android:layout_marginRight="@dimen/mh20.0dimens20.0dp"
+        android:layout_marginTop="@dimen/mh20.0dimens20.0dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mh40.0dimens40.0dp">
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/mh20.0dimens20.0dp"
+        android:layout_marginRight="@dimen/mh20.0dimens20.0dp"
+        android:layout_marginTop="@dimen/mh10.0dimens10.0dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mh40.0dimens40.0dp">
+
+
+        <TextView
+            android:layout_centerInParent="true"
+             android:id="@+id/Enname"
+            style="@style/MineLine"
+            android:textColor="#4e5562"
+
+            android:text="请回答正确的答案"
+
+            />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/mh20.0dimens20.0dp"
+        android:layout_marginRight="@dimen/mh20.0dimens20.0dp"
+        android:layout_marginTop="@dimen/mh10.0dimens10.0dp"
+        android:background="@color/whites"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/mh40.0dimens40.0dp">
+
+
+        <TextView
+             android:id="@+id/myemail"
+            style="@style/MineLine"
+            android:textColor="#4e5562"
+
+            android:text="电话:"
+
+            />
+
+
+        <EditText
+
+            android:singleLine="true"
+             android:id="@+id/ed_phone"
+            android:background="@null"
+            style="@style/MineLine"
+            android:layout_marginRight="@dimen/mh10.0dimens10.0dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/myemail"
+            android:hint="请输入电话"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/bt_finish"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/mh20.0dimens20.0dp"
+            android:layout_marginRight="@dimen/mh20.0dimens20.0dp"
+            android:layout_marginTop="@dimen/mh20.0dimens20.0dp"
+            android:background="@drawable/bt_userloginshape"
+            android:clickable="false"
+            android:gravity="center"
+            android:textSize="@dimen/mh15.0dimens15.0dp"
+            android:text="提交"
+            android:textColor="#ffffff" />
+
+    </RelativeLayout>
+</LinearLayout>

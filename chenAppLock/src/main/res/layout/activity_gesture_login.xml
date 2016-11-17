@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_f6f6f6"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/messageTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/mh150.0dimens150.0dp"
+        android:textSize="@dimen/mh16.0dimens16.0dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/mh10.0dimens10.0dp"
+        android:orientation="vertical">
+
+        <com.star.lockpattern.widget.LockPatternView
+            android:id="@+id/lockPatternView"
+            android:layout_width="@dimen/mh270.0dimens270.0dp"
+            android:layout_height="@dimen/mh270.0dimens270.0dp"
+            android:layout_gravity="center_horizontal" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/mh40.0dimens40.0dp"
+            android:layout_marginTop="@dimen/mh10.0dimens10.0dp">
+
+            <Button
+                android:id="@+id/forgetGestureBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/layout_grey_bg"
+                android:paddingLeft="@dimen/mh5.0dimens5.0dp"
+                android:paddingRight="@dimen/mh5.0dimens5.0dp"
+                android:text="@string/gesture_forget_gesture"
+                android:textSize="@dimen/mh14.0dimens14.0dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
