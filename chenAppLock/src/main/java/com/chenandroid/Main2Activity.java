@@ -1,11 +1,7 @@
 package com.chenandroid;
 
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentTabHost;
 import android.support.v7.app.AppCompatActivity;
@@ -18,11 +14,8 @@ import android.view.View;
 import android.widget.TabHost;
 import android.widget.TextView;
 
-import com.bilibili.magicasakura.utils.ThemeUtils;
-import com.chenandroid.dialog.CardPickerDialog;
-import com.chenandroid.dialog.CustomDialog;
 
-public class Main2Activity extends AppCompatActivity  implements TabHost.OnTabChangeListener,  CardPickerDialog.ClickListener{
+public class Main2Activity extends AppCompatActivity  implements TabHost.OnTabChangeListener {
     public FragmentTabHost mTabHost;
     private Class[] mFragments = new Class[] { UnLockFragment.class,
             LockFragment.class};
@@ -58,25 +51,6 @@ public class Main2Activity extends AppCompatActivity  implements TabHost.OnTabCh
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.change_theme) {
-            CustomDialog.Builder builder = new CustomDialog.Builder(this);
-            CustomDialog customDialog = builder.create();
-            builder.setOkListener(new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    startActivity(new Intent(Main2Activity.this, PSDBAohu.class));
-                }
-            });
-            builder.setResetPassword(new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    Intent intent = new Intent(Main2Activity.this, CreateGestureActivity.class);
-                    intent.putExtra("key",1);
-                    startActivity(intent);
-
-                }
-            });
-
-            customDialog.show();
 
             return true;
         }
@@ -139,29 +113,4 @@ public class Main2Activity extends AppCompatActivity  implements TabHost.OnTabCh
 
     }
 
-    @Override
-    public void onConfirm(int currentTheme) {
-        if (ThemeHelper.getTheme(Main2Activity.this) != currentTheme) {
-            ThemeHelper.setTheme(Main2Activity.this, currentTheme);
-            ThemeUtils.refreshUI(Main2Activity.this, new ThemeUtils.ExtraRefreshable() {
-                        @Override
-                        public void refreshGlobal(Activity activity) {
-                            //for global setting, just do once
-                            if (Build.VERSION.SDK_INT >= 21) {
-                                final Main2Activity context = Main2Activity.this;
-                                ActivityManager.TaskDescription taskDescription = new ActivityManager.TaskDescription(null, null, ThemeUtils.getThemeAttrColor(context, android.R.attr.colorPrimary));
-                                setTaskDescription(taskDescription);
-                                getWindow().setStatusBarColor(ThemeUtils.getColorById(context, R.color.theme_color_primary_dark));
-                            }
-                        }
-
-                        @Override
-                        public void refreshSpecificView(View view) {
-                            //TODO: will do this for each traversal
-                        }
-                    }
-            );
-
-        }
-    }
 }

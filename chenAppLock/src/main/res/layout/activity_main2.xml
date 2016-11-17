@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:theme="@style/AppTheme.AppBarOverlay">
 
-                <com.bilibili.magicasakura.widgets.TintToolbar
+                <android.support.v7.widget.Toolbar
                     android:id="@+id/toolbar"
                     style="@style/Widget.App.Toolbar"
                     android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                         android:textColor="@color/white"
                         android:textSize="22sp" />
 
-                </com.bilibili.magicasakura.widgets.TintToolbar>
+                </android.support.v7.widget.Toolbar>
 
             </android.support.design.widget.AppBarLayout>
             <FrameLayout
